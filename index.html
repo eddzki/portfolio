@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edward Szymanski — Electrical Engineer · Embedded Systems</title>
+  <meta name="description" content="Electrical Engineering student at Carleton University. Embedded systems, firmware (C/C++), and hardware-software integration." />
+  <meta property="og:title" content="Edward Szymanski — Electrical Engineer" />
+  <meta property="og:description" content="Firmware, embedded C/C++, and hardware design. Carleton University B.Eng." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="scope-readout.css" />
+</head>
+<body data-scope-active="0">
+  <canvas id="signalWaves" class="signal-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" href="#hero">EKS</a>
+    <div class="scope-readout" id="scopeReadout" aria-live="polite" aria-atomic="true" title="Active oscilloscope channel">
+      <span class="scope-readout-prefix">CH</span>
+      <span class="scope-readout-num" id="scopeChNum">1</span>
+      <span class="scope-readout-sep" aria-hidden="true">·</span>
+      <span class="scope-readout-name" id="scopeChName">Intro</span>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section id="hero" class="hero" data-scope-channel="0" aria-label="Channel 1 — Intro">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow reveal" data-reveal>Electrical Engineering · Carleton University</p>
+        <h1 class="hero-title reveal" data-reveal>
+          <span class="line">Edward Kristian</span>
+          <span class="line accent">Szymanski</span>
+        </h1>
+        <p class="hero-lead reveal" data-reveal>
+          I build <strong>memory-efficient firmware</strong> for constrained microcontrollers, stabilize real-world protocols
+          (<abbr title="Inter-Integrated Circuit">I2C</abbr>, <abbr title="Universal Asynchronous Receiver-Transmitter">UART</abbr>),
+          and bridge <strong>hardware and software</strong> from sensor to screen.
+        </p>
+        <div class="hero-actions reveal" data-reveal>
+          <a class="btn btn-primary" href="#projects">View work</a>
+          <a class="btn btn-ghost" href="assets/RESUME%20(2).pdf" download="Edward_Szymanski_Resume.pdf">Download résumé</a>
+          <a class="btn btn-icon" href="https://github.com/eddzki" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-icon" href="https://www.linkedin.com/in/edward-szymanski-30162732a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <dl class="hero-meta reveal" data-reveal>
+          <div><dt>Expected graduation</dt><dd>June 2028</dd></div>
+          <div><dt>Focus</dt><dd>Embedded · Firmware · Integration</dd></div>
+          <div><dt>Location</dt><dd>Ottawa, Ontario</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="about" class="section" data-scope-channel="1" aria-label="Channel 2 — Profile">
+      <div class="section-head reveal" data-reveal>
+        <h2>Profile</h2>
+        <p class="section-kicker">Professional summary</p>
+      </div>
+      <div class="about-grid">
+        <div class="prose reveal" data-reveal>
+          <p>
+            Electrical Engineering student specializing in <strong>embedded systems</strong>, <strong>hardware-software integration</strong>,
+            and <strong>firmware development</strong>. I architect C/C++ code for 8-bit targets, harden communication paths, and work
+            hands-on with analog and digital sensors.
+          </p>
+          <p>
+            Dean’s List — GPA <strong>10.00 / 12.00</strong>. Coursework spans digital logic, computer architecture, hardware design,
+            data structures, and mechatronics.
+          </p>
+        </div>
+        <aside class="about-card reveal" data-reveal>
+          <h3>Highlights</h3>
+          <ul class="checklist">
+            <li>Bare-metal &amp; low-level C/C++</li>
+            <li>I2C, UART, GPIO, ADC</li>
+            <li>Arduino · FPGAs · Verilog HDL</li>
+            <li>Linux · Git · disciplined workflows</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="expertise" class="section section-tint" data-scope-channel="2" aria-label="Channel 3 — Expertise">
+      <div class="section-head reveal" data-reveal>
+        <h2>Technical depth</h2>
+        <p class="section-kicker">Tools &amp; domains</p>
+      </div>
+      <div class="skills">
+        <article class="skill-block reveal" data-reveal>
+          <h3>Firmware &amp; languages</h3>
+          <ul>
+            <li>C / C++ <span class="tag">bare-metal</span></li>
+            <li>Python</li>
+            <li>Verilog HDL</li>
+            <li>Java</li>
+          </ul>
+        </article>
+        <article class="skill-block reveal" data-reveal>
+          <h3>Hardware &amp; protocols</h3>
+          <ul>
+            <li>Microcontrollers <span class="tag">Arduino</span></li>
+            <li>FPGAs · digital logic design</li>
+            <li>I2C · UART · GPIO · ADC</li>
+          </ul>
+        </article>
+        <article class="skill-block reveal" data-reveal>
+          <h3>OS &amp; workflow</h3>
+          <ul>
+            <li>Linux (Debian / Ubuntu)</li>
+            <li>Git · Vim · VS Code · Nano</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section" data-scope-channel="3" aria-label="Channel 4 — Projects">
+      <div class="section-head reveal" data-reveal>
+        <h2>Embedded engineering</h2>
+        <p class="section-kicker">Selected projects</p>
+      </div>
+      <div class="projects">
+        <article class="project-card reveal" data-reveal>
+          <header>
+            <span class="project-index">01</span>
+            <h3>Hardware-Level Spotify Controller</h3>
+            <p class="project-tags">C/C++ · Python · I2C · UART · Memory optimization</p>
+          </header>
+          <ul>
+            <li>Dual-display dashboard on an 8-bit Arduino: custom C firmware and a Python serial bridge for live API data on OLED and LCD.</li>
+            <li>Worked within 2&nbsp;KB SRAM: fixed buffers, in-place tokenization, zero heap fragmentation.</li>
+            <li>Non-blocking UART at 115200 baud with a hardware-locked display refresh.</li>
+          </ul>
+        </article>
+        <article class="project-card reveal" data-reveal>
+          <header>
+            <span class="project-index">02</span>
+            <h3>BioCare Prosthetics Control System</h3>
+            <p class="project-tags">Embedded C · Sensor integration · ADC</p>
+          </header>
+          <ul>
+            <li>Firmware in C on Arduino: ADC to translate muscle signals into digital actuation commands.</li>
+            <li>MyoWare EMG and force sensors in the signal path — capture, filter, interpret biomechanical inputs.</li>
+            <li>System-level design reviews; clear software–hardware requirements and iterative prototyping.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-tint" data-scope-channel="4" aria-label="Channel 5 — Experience">
+      <div class="section-head reveal" data-reveal>
+        <h2>Experience &amp; leadership</h2>
+        <p class="section-kicker">Teams, work, teaching</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal" data-reveal>
+          <div class="timeline-marker"></div>
+          <div class="timeline-body">
+            <h3>Independent engineering tutor</h3>
+            <p class="timeline-meta">2024 — Present</p>
+            <ul>
+              <li>Mentored 10+ students in C++, Verilog, and circuits with custom study modules.</li>
+              <li>Managed a multi-year client schedule; hands-on debugging for embedded and digital logic work.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item reveal" data-reveal>
+          <div class="timeline-marker"></div>
+          <div class="timeline-body">
+            <h3>Carleton Rugby — Player</h3>
+            <p class="timeline-meta">Ottawa, Ontario</p>
+            <ul>
+              <li>Leadership and communication under pressure; discipline and team cohesion.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item reveal" data-reveal>
+          <div class="timeline-marker"></div>
+          <div class="timeline-body">
+            <h3>Crew member — Wendy’s</h3>
+            <p class="timeline-meta">Burlington, ON · May 2022 — Aug 2024</p>
+            <ul>
+              <li>Reliable teamwork in a fast-paced environment.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section" data-scope-channel="5" aria-label="Channel 6 — Education">
+      <div class="section-head reveal" data-reveal>
+        <h2>Education</h2>
+      </div>
+      <div class="edu-card reveal" data-reveal>
+        <div>
+          <h3>Carleton University</h3>
+          <p>B.Eng in Electrical Engineering · Ottawa, Ontario</p>
+        </div>
+        <p class="edu-gpa">GPA 10.00 / 12.00 · Dean’s List</p>
+        <p class="edu-courses">
+          Relevant coursework: Digital Logic &amp; Circuits, Computer Organization &amp; Architecture,
+          Hardware Design &amp; Development, Data Structures &amp; Algorithms, Mechatronics.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" data-scope-channel="6" aria-label="Channel 7 — Contact">
+      <div class="contact-inner reveal" data-reveal>
+        <h2>Let’s connect</h2>
+        <p>Open to internships, firmware roles, and hardware-software projects.</p>
+        <div class="contact-links">
+          <a class="contact-pill" href="mailto:eddieszymanski28@gmail.com">eddieszymanski28@gmail.com</a>
+          <a class="contact-pill" href="tel:+12898288739">(289) 828-8739</a>
+        </div>
+        <div class="hero-actions contact-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/edward-szymanski-30162732a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/eddzki" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Edward Szymanski. Built for clarity — like good firmware.</p>
+  </footer>
+
+  <script src="waves.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
